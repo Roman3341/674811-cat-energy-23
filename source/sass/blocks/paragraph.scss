@@ -1,0 +1,17 @@
+.paragraph {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $greyish-brown;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+
+    &--line-high {
+      @include tablet {
+        line-height: 24px;
+      }
+    }
+  }
+}

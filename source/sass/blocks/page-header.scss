@@ -1,0 +1,162 @@
+.page-header {
+  position: relative;
+  margin-bottom: 22px;
+
+  &--index {
+    @include tablet {
+      margin-bottom: 529px;
+    }
+
+    @include desktop {
+      margin-bottom: 268px;
+    }
+  }
+
+  @include tablet {
+    max-width: $tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    max-width: $desktop-container-max;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-header__wrapper {
+  padding: 0;
+}
+
+.page-header__title {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 305px;
+    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      background-image: none;
+    }
+
+    @include desktop {
+      background-image: url("/img/index-background-desktop@1x.jpg");
+      background-size: 720px 696px;
+      top: 0;
+      right: 0;
+      left: auto;
+      height: 696px;
+      width: 720px;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 667px;
+    padding-left: 90px;
+  }
+
+  @include desktop {
+    padding-left: 190px;
+    position: static;
+    width: 767px;
+  }
+}
+
+@media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+  .page-header__title::before {
+    background-image: url("../../img/index-background-mobile@2x.jpg");
+
+    @include desktop {
+      background-image: url("/img/index-background-desktop@2x.jpg");
+    }
+  }
+}
+
+.page-header__product-image-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  @include tablet {
+    top: 190px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  @include desktop {
+    top: 142px;
+    width: 552px;
+    left: 561px;
+  }
+}
+
+.page-header__img {
+  height: 270px;
+  width: 280px;
+
+  @include tablet {
+    width: 709px;
+    height: 609px;
+  }
+
+  @include desktop {
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.page-header__title-slogan {
+  display: block;
+  font-family: $Oswald;
+  color: $white;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 auto 29px auto;
+  text-align: center;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: $lightBlack;
+    margin-bottom: 48px;
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.page-header__button-wrapper {
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.page-header__choose-program.button {
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    min-width: 245px;
+    margin-right: auto;
+    font-weight: 100;
+    padding: 16px 27px;
+  }
+}

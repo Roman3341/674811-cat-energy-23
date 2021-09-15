@@ -1,0 +1,47 @@
+.green-stripe {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 100%;
+    top: 15px;
+    background-color: $green;
+  }
+
+  @include tablet {
+    margin-left: 0;
+    margin-bottom: 70px;
+
+    &--additional-goods {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+.green-stripe-title {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $Oswald;
+  font-weight: 400;
+  margin: 0;
+  padding-right: 25px;
+  background-color: $white;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 30px;
+    padding-left: 40px;
+  }
+
+  @include desktop {
+    margin-left: 69px;
+  }
+}

@@ -1,0 +1,73 @@
+.invite {
+  position: relative;
+  background-color: $white;
+}
+
+.invite__wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  background-color: $grey;
+  top: 0;
+  left: 0;
+
+  &--index {
+    background-color: $white;
+  }
+
+  @include tablet {
+    position: relative;
+    padding: 0 70px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    background-color: $white;
+  }
+}
+
+.invite__title {
+  font-family: $Oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $lightBlack;
+  text-transform: uppercase;
+  margin-top: 31px;
+  margin-bottom: 26px;
+
+  @include tablet {
+    margin-top: 64px;
+    margin-bottom: 62px;
+    width: 154px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+.invite__text {
+  margin-top: 33px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    margin-top: 63px;
+    margin-bottom: 62px;
+    width: 155px;
+  }
+}
+
+.invite__map {
+  height: 400px;
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.invite__spb {
+  @include tablet {
+    display: inline-block;
+    margin-top: 13px;
+  }
+}

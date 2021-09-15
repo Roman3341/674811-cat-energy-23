@@ -1,0 +1,40 @@
+.burger-button {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: auto 0;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.burger-button::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: auto 0;
+}
+
+.burger-button::after {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: auto 0;
+}

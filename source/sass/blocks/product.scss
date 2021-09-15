@@ -1,0 +1,217 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    margin-bottom: 140px;
+    min-height: 432px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 142px;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-bottom: 142px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 142px;
+    }
+  }
+}
+
+.product__wrapper {
+  width: 140px;
+
+  &--add {
+    width: inherit;
+    text-align: center;
+  }
+
+  @include tablet {
+    width: 100%;
+    padding: 0 37px;
+    text-align: center;
+  }
+}
+
+.product__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--add {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27px;
+  }
+
+  @include tablet {
+    width: 324px;
+    background-color: $grey;
+    flex-direction: column;
+    align-items: center;
+
+    &--add {
+      padding-top: 0;
+      border: $greyBorder;
+      background-color: $white;
+    }
+  }
+
+  @include desktop {
+    width: 245px;
+  }
+}
+
+
+.product__title {
+  display: block;
+  font-family: $Oswald;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 74px;
+  margin-top: 25px;
+  margin-bottom: 18px;
+
+  &--add {
+    width: inherit;
+    margin-bottom: 11px;
+  }
+
+  @include tablet {
+    margin-top: 165px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+    width: 128px;
+    text-align: center;
+
+    &--add {
+      margin-bottom: 28px;
+      width: 134px;
+    }
+  }
+}
+
+.product__description-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+
+  &--add {
+    width: inherit;
+    margin-bottom: 15px;
+  }
+
+  @include tablet {
+    margin-bottom: 33px;
+
+    &--add {
+      margin-bottom: 50px;
+    }
+
+    &--add .product__description {
+      border: 0;
+    }
+  }
+}
+
+.product__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: $greyBorder;
+    padding: 7px 0;
+    margin-bottom: 0;
+  }
+}
+
+.product__property {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 2px;
+  padding: 0;
+
+  &--add {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 auto 22px auto;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: $greyBorder;
+    padding: 7px 0;
+    margin-bottom: 0;
+
+    &--add {
+      width: 167px;
+      border: 0;
+      padding: 0;
+      margin-bottom: 85px;
+      font-size: 16px;
+    }
+  }
+}
+
+.product__image {
+  width: 140px;
+  height: 144px;
+
+  &--plus {
+    width: 31px;
+    height: 31px;
+  }
+
+  @include tablet {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--small {
+      height: 172px;
+      margin-top: -46px;
+    }
+
+    &--big {
+      height: 208px;
+      top: -82px;
+    }
+
+    &--plus {
+      left: 50%;
+      transform: translateX(-30.5px);
+      height: 61px;
+      width: 61px;
+      margin-top: 55px;
+    }
+  }
+}
