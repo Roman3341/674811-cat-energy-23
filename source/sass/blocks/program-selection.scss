@@ -79,6 +79,7 @@
     padding-left: 110px;
     padding-right: 110px;
     display: flex;
+    flex-wrap: wrap;
 
     &--radio {
       width: 50%;
@@ -208,10 +209,14 @@
     &--contacts {
       display: flex;
       justify-content: space-between;
+      width: 100%;
     }
 
     &--checkbox {
       margin-bottom: 72px;
+      flex-wrap: nowrap;
+      width: 100%;
+      justify-content: space-between;
     }
   }
 }
@@ -219,6 +224,7 @@
 .program-selection__list--checkbox li {
   @include desktop {
     margin-bottom: 0;
+    width: 221px;
   }
 }
 
@@ -247,6 +253,7 @@
 
     @include desktop {
       min-width: auto;
+      margin-right: 0;
 
       &:nth-child(2n) {
         min-width: auto;

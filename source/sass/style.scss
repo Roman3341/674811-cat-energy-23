@@ -7,6 +7,9 @@
 //layouts
 @import "./layouts.scss";
 
+//fonts
+@import "./fonts.scss";
+
 //blocks
 @import "./blocks/site-title.scss";
 @import "./blocks/main-nav.scss";
@@ -30,3 +33,4 @@
 @import "./blocks/paragraph.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/border-wrapper.scss";
+@import "./blocks/visually-hidden.scss";

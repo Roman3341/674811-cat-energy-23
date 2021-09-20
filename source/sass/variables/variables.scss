@@ -13,6 +13,27 @@ $pinkish-grey-strong: #bababa;
 $red: #ff8282;
 $active-text: rgba(255, 255, 255, 0.3);
 $grey-middle: #E6E6E6;
+$breakpoint-mobile: 320px;
+$breakpoint-mobile-only: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1220px;
+$max-screen-width: 1300px;
+
+//--------------range----------------
+$track-color: #dcdcdc;
+$thumb-color: #68b738;
+
+$thumb-radius: 50%;
+$thumb-height: 32px;
+$thumb-width: 32px;
+$thumb-border-width: 12px;
+$thumb-border-color: white;
+
+$track-width: 428px;
+$track-height: 6px;
+$track-border-width: 0;
+$track-border-color: transparent;
+$track-radius: 3px;
 
 //fonts
 $Oswald: "Oswald","Arial", sans-serif;
