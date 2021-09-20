@@ -8,6 +8,7 @@
     max-width: $desktop-container-max;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 70px;
   }
 }
 
@@ -20,9 +21,10 @@
 
   @include tablet {
     border-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    column-gap: 60px;
+    row-gap: 138px;
     padding-top: 82px;
     padding-left: 30px;
     padding-right: 30px;
@@ -30,8 +32,12 @@
   }
 
   @include desktop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    column-gap: 80px;
+    row-gap: 144px;
     padding-left: 110px;
     padding-right: 110px;
-    margin-bottom: -63px;
+    padding-top: 90px;
   }
 }

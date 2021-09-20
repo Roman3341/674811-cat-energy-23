@@ -3,7 +3,6 @@
   flex-wrap: wrap;
 
   @include tablet {
-    margin-bottom: 140px;
     min-height: 432px;
 
     &:last-child {
@@ -12,19 +11,6 @@
 
     &:nth-last-child(2) {
       margin-bottom: 0;
-    }
-  }
-
-  @include desktop {
-    margin-bottom: 142px;
-    margin-right: 25px;
-
-    &:last-child {
-      margin-bottom: 142px;
-    }
-
-    &:nth-last-child(2) {
-      margin-bottom: 142px;
     }
   }
 }
@@ -47,10 +33,11 @@
 .product__container {
   position: relative;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
-  width: 280px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 280px;
 
   &--add {
     flex-direction: column;
@@ -59,20 +46,16 @@
   }
 
   @include tablet {
-    width: 324px;
     background-color: $grey;
     flex-direction: column;
     align-items: center;
+    max-width: initial;
 
     &--add {
       padding-top: 0;
       border: $greyBorder;
       background-color: $white;
     }
-  }
-
-  @include desktop {
-    width: 245px;
   }
 }
 
@@ -97,7 +80,7 @@
     margin-right: auto;
     font-size: 20px;
     line-height: 20px;
-    width: 128px;
+    width: 140px;
     text-align: center;
 
     &--add {
@@ -184,7 +167,7 @@
 .product__image {
   width: 140px;
   height: 144px;
-
+  object-fit: contain;
   &--plus {
     width: 31px;
     height: 31px;

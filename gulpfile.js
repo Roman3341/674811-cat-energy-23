@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
+var htmlnano = require('gulp-htmlnano');
 
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
@@ -18,6 +19,10 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+
+var options = {
+  removeComments: false
+};
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -69,8 +74,9 @@ gulp.task("sprite", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
-      include()
+      include({ encoding: 'utf8' })
     ]))
+    .pipe(htmlnano(options))
     .pipe(gulp.dest("build"));
 });
 
